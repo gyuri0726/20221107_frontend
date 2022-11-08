@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>HTML 미디어 관련 </h1>
+
+<h2>이미지</h2>
+
+<!-- 상대경로: 파일의 위치에 대해서 상대적인 경로
+./ : 현재 파일의 위치
+../ : 현재 파일의 상위 디렉토리 (폴더)
+./images/example.jpg => 같은 폴더 내에 있는 images 폴더 안의 example.jpg 
+
+절대경로: 현재 파일 위치와 상관없이 절대적인 경로 => root(최상위) 디렉토리가 기준
+/ : root (최상위)
+/thml/images/example.jpg => root 폴더 내에있는 html 폴더 안의 images 폴더 안의 example.jpg
+
+
+root 폴더에 가까우면 => 절대경로
+현재 파일과 가까우면 => 상대경로 
+-->
+
+<!-- <img> : 리소스를 불러와 문서에 표시한다.
+
+-src : 불러올 리소스의 경로를 지정한다. 
+-alt : 리소스를 불러오는데 실패했을 경우 보여줄 대체 텍스트, 브라우저가 읽어주기도한다. 필수로적어!!
+-width: 사진의 너비를 지정한다. 단위 생략시 px(픽셀) 단위로 지정된다.
+-height: 사진의 높이를 지정한다. 
+         > width, height 둘중 하나만 지정시원본 비율을 맞춰서 나머지를 조정한다
+         > 둘다지정하면 원본의 비율이 꺠진다.
+         -<img>는 인라인 요소이다.
+
+
+-->
+<img src="./coffee-g6573b4f9a_1280.jpg" alt="커피사진" width="200" height="50"/>
+
+
+<span> 이미지1</span>
+
+<h2>HTML 오디오</h2>
+<!-- <aoudio> : 오디오를 문서에 출력한다. 
+        -controls: 컨트롤바 생성 유무를 지정한다. 값이 필요없는 속성     
+        -muted: 음소거 여부 지정. 값이 필요없는 속성 
+        -loop: 무한 반복 여부 지정. 값이 필요없는 속성
+        -autoplay: 자동 재생 여부 지정. 사용자의 불쾌한 경험을 막기 위해 브라우저에서 막는다.
+
+
+    --> 
+
+    <audio
+      src="./싸이 (Psy)_That That (Prod. & Feat. SUGA of BTS).mp3"
+
+    controls
+muted
+loop
+autoplay ></audio>
+
+
+
+
+<h2>HTML 비디오 </h2>
+
+<video
+src="./ì_¬ì_± - 58142.mp4"
+
+controls
+loop
+width="400"
+muted
+autoplay ></video>
+
+
+<!-- iframe : 다른 html 문서를 문서내에 내장시킬수있다 => 보안의 이유로 사용을 권장하지않는다 -->
+<iframe width="455" height="256" src="https://www.youtube.com/embed/PmX4M0ItgHk" title="430회. 금감원에 민원 넣었더니 보험사 직원이 제발 민원 취해해 달라고 했던 288회 기억나시나요?  그 사건의 금감원 결과가 도착했습니다" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe 
+
+</body>
+</html>
