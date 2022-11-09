@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>HTML form</title>
+</head>
+<body>
+    
+    <h1>HTML 폼 데이터</h1>
+<!-- <form>: 서버에 데이터를 제출하기 위한 양식 
+             -action: 데이터를 처리할 서버를 지정한다.
+             -input의 타입에 따라 유효성 검사를 한다.
+              =>method 가 get일 경우 url의 마지막에 ? 뒤에 키=값&키2=값2.......
+               -method: 데이터를 서버에 전송하는 방법을 지정한다. 
+     <button>: <form> 태그 안에 작성하면 type에 따라 동작을 한다.
+           1) submit: 서버에 전송한다.
+           2) reset: <form>을 초기화한다.
+            -form 속성을 통해서 <from>의 ID값을 지정하면 <form> 밖에있어도 동작시킬수있다.
+
+
+
+     <input> : 서버에 전송할 데이터를 입력 받는다.
+               -type 속성을 통해 입력받을 데이터의 형태를 지정할수 있다.
+               -name 속성을 통해 전송할 데이터의 이름을 지정할수 있다.
+               =>키(key) -값(value) 쌍으로 전송된다
+               -required: required를 지정한 <input>에 입력하지 않으면 유효성 검사에 걸린다.
+               -readonly: 읽기 전용 , 수정불가
+               -placeholer: <input>에 안내문구를 표시한다.
+               1)get: 기본값(지정안했을때의 값). 데이터가 url에 노출된다
+               2)post:데이터가 url에 노출되지 않는다
+               -autocomplete: 자동완성 여부를 지정한다. "on" 혹은 "off"
+
+     <label> for 속성을 통해서 <input>의 id값을 지정하면 해당 <input>을 클릭한것과 같은 효과가 있다
+        =><label>안에 글씨와 <input>을 같이 넣어도 같은 효과가있다.
+-->     
+
+    <form action="server.js" method="post" id="signinform">
+        <ul>
+            <li><label>이름: <input type="text" name="username" readonly value="seok"/></label>
+        </li>
+
+       
+        <li>
+            비밀번호:<input type="password" name="password" id="password"></li>
+        <li>이메일:<input type="email" required placeholder="이메일을 입력해주세요"/></li></ul>
+        <li>주문수량: <input type="number" max="10"></li>
+        <label>
+            <input type="checkbox" value="10" name="basketball" checked></li>
+            농구</label>
+            <input type="checkbox" value="10" name="soccer"></li>
+            축구
+            <input type="checkbox" value="10" name="baseball"></li>
+            야구
+           <li>마케팅 수신 : <input type="radio" name=" id="/> 동의
+           <input type="radio" name="marketing" id=""/> 거부</li>
+
+
+<button type="submit">전송</button>
+
+
+</form>
+<button type="reset" form="signinform">초기화</button>
+
+
+
+</body>
+</html>
