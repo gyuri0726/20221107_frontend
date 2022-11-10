@@ -1,0 +1,124 @@
+*{
+font-size: 24px;
+}
+
+li{
+font-size: 16px;
+}
+
+
+.red{ color: red;
+
+}
+
+.bold{
+    font-weight: bold
+}
+
+#big{
+    font-size: 36px;
+}
+
+h3.green{
+    color:green
+}
+
+.list{
+
+    border: 1px solid black;
+    paddding:0;
+}
+
+
+.list > li{
+
+    border: 1px solid black;
+}
+
+/* 후손 선택자 */
+.list li{
+    /* li태그의 점 삭제 */
+list-style: none;
+}
+/* 인접 형제 선택자 */
+.list .target+ li { color:blueviolet
+
+}
+
+/* 첫번째 li요소만 제외하고 적용  */
+.list > li + li{ border-top: 1px solid black;
+
+
+}
+
+/* 일반 형제 선택자 */
+.list .target ~ li {
+
+    font-weight: bold;
+}
+
+/* 속성 선택자 */
+input[required]{
+    /* required 속성을 가진 input에만 적용 */
+    border-width: :5px;
+}
+
+input[type="checkbox"]{
+    /* type이 checkbox인 input에만  */
+}
+
+
+/* item 클래스 너비 100px, height 100px */
+.item{ width: 100px; height: 100px;}
+
+/* item 클래스를 가지면서 big 클래스를 가지면서 너비 200px 높이 200px */
+.item.big{ width: 200px; height=200px;}
+
+/* item 클래스의 자식 요소인 li태그는 빨간색 글씨 */
+.item > li{color:red}
+
+/* item 클래스의 인접 형제인 item 클래스 왼쪽여백 10px */
+.item + .item{ margin-left: 10px;}
+
+
+/* input의 타입이 radio인 요소에만 안쪽 여백 10px */
+input[type="radio"]{padding:10px}
+
+
+/* 가상클래스 */
+.list > li:hover{background-color: #ddd;}
+
+
+
+.list > li:nth-child(1){ background-color: red;}
+
+.list > li:active{ background-color: #bbb;}
+
+
+/* content 속성 지정 안하면 안생긴다 => 텍스트 없이 쓰려면 빈 문자열 ""이라도 넣어야 한다*/
+.list > li:nth-child(1)::before{content:"::before";}
+
+..list > li:nth-child(1)::after { content:"::after";}
+
+
+
+
+
+
+/* 연습 */
+
+/* item 클래스 너비 100px, height 100px */
+.item{ width: 100px; height: 100px;}
+
+/* item 클래스를 가지면서 big 클래스를 가지면서 너비 200px 높이 200px */
+.item.big{ width: 200px; height=200px;}
+
+/* item 클래스의 자식 요소인 li태그는 빨간색 글씨 */
+.item > li{color:red}
+
+/* item 클래스의 인접 형제인 item 클래스 왼쪽여백 10px */
+.item + .item{ margin-left: 10px;}
+
+
+/* input의 타입이 radio인 요소에만 안쪽 여백 10px */
+input[type="radio"]{padding:10px}
