@@ -1,0 +1,11 @@
+img{
+    width: 300px;
+    float:right
+
+}
+
+img:nth-child(2){
+    width: 300px;
+    float:left;
+
+}

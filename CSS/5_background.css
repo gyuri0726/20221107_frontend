@@ -1,0 +1,39 @@
+
+body{
+    height:2000px;
+}
+.box:nth-child(2){
+    margin-top: 10px;
+}
+.box{
+    width: 100px;
+    height:100px;
+    border: 3px solid #000;
+}
+
+.colorbox{
+    /* 배경색 지정 */
+background-color: yellow;
+background-image: url("./images/coffee-g6573b4f9a_1280.jpg");
+/* 배경 이미지 크기 지정 */
+background-size:cover;
+
+/* 배경 이미지 반복 방법 지정 */
+background-repeat:no-repeat;
+
+/* 배경 이미지의 위치를 지정 */
+/* background-positon:top center; */
+
+background-origin: padding-box;
+background-clip: padding-box;
+
+border-color:bisque;
+
+background-attachment: scroll;
+overflow: scroll;
+padding: 10px;
+
+/* 단축속성 => 사이즈 앞에 포지션값이 반드시 먼저 와야하고 / 로 구분한다*/
+background: url("./images/coffee-g6573b4f9a_1280.jpg") center top / cover no-repeat red;
+
+}

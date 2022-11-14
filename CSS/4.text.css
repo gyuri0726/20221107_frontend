@@ -1,0 +1,62 @@
+/* 텍스트 관련 속성을 거의다 자식에게 상속된다. => <a>태그 같이 기본적인 스타일이 지정된 경우도 있다.*/
+:root{
+    /* root는 html 전체에 적용도니다 => html보다 명시도(우선순위)가 높다  */
+    font-size: 10px;
+}
+
+html{ 
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    font-size: 32px;
+   
+}
+
+h2{
+    font-size: 3rem; /* rem : root (최상위요소)를 기준으로 배율로 지정 */
+
+}
+
+ul{
+    font-size: 20px;
+}
+
+li{
+    font-size: 0.7em; /*부모 요소를 기준으로 배율로 지정*/
+}
+
+a{
+    color:inherit;
+}
+.color{
+    color:aquamarine
+}
+
+.align{
+    text-align:justify
+}
+
+.transform{
+    text-transform:lowercase;
+    text-transform:uppercase;
+    text-transform: capitalize;
+}
+.decoration{
+    /* 위치, 모양, 색상, 두께 */
+    text-decoration: underline wavy red 4px;
+    text-decoration-line: line-through;
+    text-decoration-color: blue;
+    text-decoration-thickness:10px;
+    text-decoration-style: dashed;
+}
+
+.lineheught{
+    line-height:30px; /*줄간격*/
+    word-spacing: 10px; /*단어 사이*/
+    letter-spacing: 0.02px; /*글자사이사이*/
+}
+@font-face{
+    font-family:"Noto";
+    src:url("./fonts/NotoSansKR-Regular.otf");
+    font-weight: 300;
+
+}

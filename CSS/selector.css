@@ -41,7 +41,7 @@ h3.green{
 list-style: none;
 }
 /* 인접 형제 선택자 */
-.list .target+ li { color:blueviolet
+.list .target + li { color:blueviolet
 
 }
 
