@@ -15,6 +15,7 @@ body{
 .wrapper{
     height: 300px;
     border:3px solid red;
+    top:0;
     position:relative
 }
 
@@ -46,4 +47,12 @@ z-index: 1000;
     background-color: red;
     z-index: 300;
 
+}
+
+.btn{
+    position: absolute;
+    height: 100px;
+    background-color: tomato;
+    left: 100px;
+    right: 100px;
 }
