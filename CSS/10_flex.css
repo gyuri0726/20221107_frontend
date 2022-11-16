@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;  /*주축에대해서 정렬*/
+    align-items:flex-end; /*교차축에 대해서 정렬 */    /*stretch*/
+    flex-wrap: nowrap;
+    
+    height: 400px;
+    width:200px;
+    overflow: hidden;
+
+
+
+
+    /* padding: 30px; */
+    border: 3px solid black;
+}
+
+.box{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-basis: 100px;
+   flex-shrink: 0;
+
+    /* width: 400px; */
+   height: 100px;
+    margin: 10px;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 100px;
+   
+}
+
+.box:nth-last-of-type(1){
+    /* flex-grow: 2; */
+    /* flex-shrink: 1; */
+
+    flex:2 1 100px;
+
+}
+
+.box:nth-last-of-type(2){
+    /* flex-grow: 1;
+    flex-shrink: 2; */
+flex: 1 2 100px;
+
+}
+
+
+
+.box:nth-last-of-type(3){
+    /* flex-grow: 3;
+    flex-shrink: 1; */
+
+    flex: 3 1 100px;
+}
+

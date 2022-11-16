@@ -12,7 +12,7 @@
     transition-delay:0s; /* 지연시간 : 몇초뒤에 변화를 시작할 것인가*/
     transition-property: color, transform;/* transition을 적용하고자 하는 속성을 지정*/
     transition-timing-function: linear;
-    transition: color 0.25s, transform 3s, opacity 0.5s;
+    transition: color 0.25s, transform 3s, opacity 0.5s; /*opacity - 사라지는거*/
 }
 .box:hover{
     opacity:0; /*사라지게하는거*/
