@@ -1,3 +1,17 @@
+
+:root{
+    /* 재사용할 값을 변수에 지정한다 
+        => 사용할때는 var()안에 변수명을 넣는다 */
+    --header-height:60px;
+    --main-color:#7e78ff;
+}
+
+
+body{
+    padding-top:var(--header-height);
+}
+
+
 #header{
     display: flex;
     padding: 0 30px;
@@ -5,9 +19,14 @@
 
     border-bottom: 1px solid #ddd;
     
-    max-height: 60px;
+    max-height: var(--header-height);
     overflow: hidden;
     transition: 0.4s;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
 }
 
 
@@ -18,6 +37,7 @@
     left: 30px;
     font-size: 1.8rem;
     line-height: 60px;
+    color: var(--main-color);
 }
 
 #gnb{
@@ -53,6 +73,81 @@
 }
 button{display: none;}
 
+
+
+.imglist{
+    padding:50px 0;
+}
+.imglist ul{
+    display: flex;
+    justify-content: center;
+}
+
+
+.imglist ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    background: center/ 100% no-repeat;
+color:var(--main-color);
+    
+
+    /*redius 모서리를 둥그게 원으로 만들기 너비와 높이가 같을때 50%를 지정하면 정원이 만들어짐*/
+    border-radius: 50%;
+    transition: background-size 0.25s;
+    
+}
+
+.imglist ul li a:hover{
+    background-size: 110%;
+    color: red;
+    font-weight: 700;
+}
+
+
+.imglist ul li:nth-child(1) a {
+    background-image: url("../images/원영1.jpg");
+
+}
+
+.imglist ul li:nth-child(2) a {
+    background-image: url("../images/원영2.jpg");
+}
+
+
+.imglist ul li:nth-child(3) a{
+    background-image: url("../images/원영3.jpg");
+}
+
+.imglist ul li:nth-child(4) a{
+    background-image: url("../images/원영6.jpg");
+}
+
+.imglist ul li:nth-child(5) a{
+    background-image: url("../images/원영5.jpg");
+}
+
+
+
+.imglist ul li + li{
+
+   margin-left: 20px;
+}
+
+@media screen and (min-width:961px) {
+    #header{
+        max-height: 50px;
+        transition: 0s;
+    }
+}
+
+
+
+
+
 @media screen and (min-width:640PX) {
     #header:hover{
         max-height: 400px;
@@ -65,6 +160,7 @@ button{display: none;}
     justify-content: center;
    }
     #gnb{width: auto;}
+
     #gnbList{
         display: block;
     }
@@ -96,5 +192,17 @@ button{display: none;}
     height: 50px;
 
 }
-
+.imglist ul{
+    flex-direction: column;
+    align-items: center;
 }
+
+.imglist ul li + li {
+    margin-top: 10px;
+    margin-left: 0;
+}
+}
+
+
+
+
