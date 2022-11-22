@@ -124,3 +124,21 @@ var user2 ={
 };
 
 console.log("두 사람의 키 차이는 ", user2.height - user1.height);
+
+
+//원시 데이터(Primitive Data) => 실제 저장되어 있는 값.
+var str = "hwangbo seok";
+var copyStr = str;
+copyStr = "minsu";          // str과 별개의 값을 가진다.
+console.log(str, copyStr);
+
+//참조 타입 데이터 => 데이터가 저장되어 있는 참조 값.
+var obj = {
+    age:30,
+    name: "seok",
+
+};
+
+var copyobj = obj;  // 참조값을 가져 오기 때문에 copyobj를 변경하면 obj도 같이 변경된다.
+copyobj.age = 40;
+console.log(copyobj, obj);

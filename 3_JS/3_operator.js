@@ -47,3 +47,91 @@ console.log(num03);
 console.log(num04);
 console.log(num03--);
 console.log(--num03);
+
+
+
+
+
+// 비교연산자 (동등연산자, 일치연산자)
+
+//동등 연산자 (==) : 암묵적 형변환
+console.log("3 == 1 + 2", 3== 1 + 2);
+console.log("3 == '3' + ", 3== '3');
+console.log("0 == false :", 0 == false);
+
+
+//일치 연산자 (===) : 암묵적 형변환을 하지 않는다.   (권장 !!!!!!!!)
+console.log("3 === 1 + 2", 3=== 1 + 2);
+console.log("3 === '3' + ", 3=== '3');
+console.log("0 === false :", 0 === false);
+
+
+// 부정 연산자(!) : 논리를 반전시킨다.
+console.log(3 !== 1+2);
+var isTure = true;
+console.log(!isTure);
+
+//대소 관계 비교 연산자 : 좌항과 우항의 대소관계를 비교 => boolean 값을 반환 
+var num1 =4;
+var num2 = 10;
+console.log(num1>num2);
+console.log(num1 < num2);
+console.log(num1 >= 4);
+
+
+/*
+  논리 연산자 : 좌항과 우항의 논리값을 조합해서 새로운 논리값을 생성.
+        =>여러개의 조건을 한번에 확인 할 때 사용한다.
+  ||(or) : 둘 중 하나라도 true => true, 둘 모두 false일 때만 false
+  &&(and) : 둘 중 모두 true일 때만 true, 둘중 하나라도 false면 false
+
+*/
+console.log(10>4 || 7 <5);
+console.log(10>4 && 7 <5);
+
+//문자열 연결 연산자 : 좌항고 ㅏ우항의 문자열을 연결 한다.
+//  => +를 사용한다. => 피연산자가 문자열이면 연결 연산자, 숫자면 산술 연산자.
+//  => 문자와 숫자를 더하면 연결 연산자가 된다.
+//  => 템플릿 리터럴 사용을 권장한다.
+
+
+var str1 = "hwangbo";
+var str2 = "seok";
+var str3 = str1 + str2;
+console.log(str3);
+
+var name = "seok hwangbo";
+var address = "인천";
+var age = 30;
+
+console.log("안녕하세요 저는 " + address + "에 사는 " + age + "세 " + name + "입니다.");
+
+console.log(`안녕하세요 저는 ${address}에 사는 ${age}세 ${name}입니다.`); // 템플릿 리터럴
+
+console.log(1 +"1"); // 숫자 1일 문자열로 암묵적 형변환
+
+
+//typeof 연산자 : 피연산자의 데이터 타입을 반환한다.
+console.log(typeof "안녕하세요");
+
+
+//원시 데이터(Primitive Data) => 실제 저장되어 있는 값.
+var str = "hwangbo seok";
+var copyStr = str;
+copyStr = "minsu";
+console.log(str, copyStr);
+
+//참조 타입 데이터 => 데이터가 저장되어 있는 참조 값.
+var obj = {
+    age:30,
+    name: "seok",
+
+};
+
+
+
+
+var copyobj = obj;
+copyobj.age = 40;
+console.log(copyobj, obj);
+
