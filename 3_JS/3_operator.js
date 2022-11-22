@@ -115,23 +115,4 @@ console.log(1 +"1"); // 숫자 1일 문자열로 암묵적 형변환
 console.log(typeof "안녕하세요");
 
 
-//원시 데이터(Primitive Data) => 실제 저장되어 있는 값.
-var str = "hwangbo seok";
-var copyStr = str;
-copyStr = "minsu";
-console.log(str, copyStr);
-
-//참조 타입 데이터 => 데이터가 저장되어 있는 참조 값.
-var obj = {
-    age:30,
-    name: "seok",
-
-};
-
-
-
-
-var copyobj = obj;
-copyobj.age = 40;
-console.log(copyobj, obj);
 
