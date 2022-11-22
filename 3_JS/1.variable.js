@@ -32,7 +32,7 @@ console.log(userName);"hwangbo seok"
 //2.변수명으로는 문자, 숫자, $, _ 만 사용할수있다. => 숫자로 시작할순 없다.
 var number;
 var num_1;
-//var num-1;  $, _ 이외의 특수문자를 변수명으로 사용할 수 없다.
+//var num-1;  $,_ 이외의 특수문자를 변수명으로 사용할 수 없다.
 //var 1_umm; 변수명은 숫자로 시작할수없다.
 
 
@@ -49,6 +49,8 @@ var USERNAME;
 // 문제1.num1과 num2를 선언하고 각각 20, 30을 할당
 var num1 = 20;
 var num2 = 30;
+var num3,num4;
+num3 = num4 = 40;
 
 
 //문제2. num1과 num2를 더한 값을 result02변수에 할당
