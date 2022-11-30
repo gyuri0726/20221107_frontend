@@ -116,4 +116,5 @@ console.log(typeof "안녕하세요");
 
 
 //문자열을 숫자로 바꾼다 => 숫자로 변환 가능한 문자열만 바꾼다.
-console.log(parseInt("sfjlksdfjkl"));
+// => 숫자로 변환 불가능한 경우엔 NaN (Nat a Number)을 반환한다.
+console.log(parseInt("false"));
