@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+
+    <style>
+      .container {
+        padding: 10px;
+        border: 3px solid red;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+      }
+
+      .box.on {
+        border: 3px solid green;
+      }
+
+      .todoList li.done {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <input type="text" class="inputTodo" .val() />
+    <button>등록</button>
+    <ul class="todoList"></ul>
+
+    <script>
+      // $(선택자) : 선택자에 해당하는 요소를 찾아준다. =>스타일이나 이벤트 바인딩시 해당하는 모든 요소에 추가된다.
+      $(".box").click(function (e) {
+        // css(): 적용된 css 값을 가져오거나 변경할수 있다.
+        console.log(this);
+
+        // this나 e.target은 Jquery api를 호출할수 없기 때문에 $()안에 넣어야 된다.
+        $(e.target).css("background-color", "red");
+        $(e.target).text("클릭");
+
+        $(e.target).toggleClass("on");
+        //$(e.target).fadeOut(); // fadeOut 서서히 사라지기
+      });
+
+      $(".container").on("mouseover", function () {
+        $(".container").css("border-color", "blue");
+      });
+
+      $("button").click(function () {
+        $(".todoList").append(
+          `<li>${$(".inputTodo").val()}<button>삭제</button></li>`
+        );
+      });
+
+      // 이벤트 위임 : 상위요소에 이벤트를 바인딩 하고 e.target을 이용해 실제 이벤트가 발생한 대상을 변경한다.
+      $(".todoList").click(function (e) {
+        //Even.target.natches(선택자) : 전달된 선택자와 일치하는 true 혹은 flase 반환
+        if (e.target.matches("todoList li")) {
+          $(e.target).toggleClass("done");
+        } else if (e.target.matches(".todoList li button")) {
+          if (confirm("삭제하시겠습니까?")) {
+            //$().parent(): 부모 요소를 가르킨다.
+
+            $(e.target).parent().remove();
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

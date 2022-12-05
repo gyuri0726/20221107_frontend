@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>onclick변경</title>
+
+    <style>
+      #box {
+        width: 500px;
+        height: 400px;
+        line-height: 100px;
+        color: #fff;
+        background-color: black;
+      }
+
+      #box2 {
+        width: 500px;
+        height: 400px;
+        line-height: 100px;
+        color: #fff;
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="box"></div>
+    <input type="button" value="빨간색" onclick="bgRed()" />
+    <input type="button" value="파란색" onclick="bgBlue()" />
+    <input type="button" value="노란색" onclick="bgYellow()" />
+    <input type="button" value="초록색" onclick="bgGreen()" />
+
+    <div id="box2"></div>
+    <input type="number" class="num" />
+    <button class="btn">등록</button>
+  </body>
+
+  <script>
+    function bgRed() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "red";
+    }
+
+    function bgBlue() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "blue";
+    }
+
+    function bgYellow() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "yellow";
+    }
+
+    function bgGreen() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "green";
+    }
+
+    let boxElem = document.querySelector("#box2"); //id 할때는 # , calss 할때는 .
+    let inputElem = document.querySelector(".num");
+    let numBtn = document.querySelector(".btn");
+
+    numBtn.addEventListener("click", function () {
+      boxElem.style.width = inputElem.value + "px";
+      console.log(inputElem.value);
+    });
+  </script>
+</html>
