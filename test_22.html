@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>만들어보기</title>
+
+    <style>
+      #box {
+        width: 400px;
+        height: 400px;
+        background-color: aqua;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <input type="button" value="빨간색" onclick="bgRed()" />
+    <input type="button" value="파란색" onclick="bgBlue()" />
+    <input type="button" value="노란색" onclick="bgYellow()" />
+    <input type="button" value="초록색" onclick="bgGreen()" />
+  </body>
+
+  <script>
+    function bgRed() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "Red";
+    }
+    function bgblue() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "Blue";
+    }
+
+    function bgblue() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "Yellow";
+    }
+
+    function bgblue() {
+      let box = document.getElementById("box");
+      box.style.backgroundColor = "Green";
+    }
+  </script>
+</html>
